@@ -1,0 +1,77 @@
+<html>
+    <style>
+        header {
+            background-color: #9BE388;
+            border: 3px solid black;
+        }
+        footer {
+            background-color: #9BE388;
+            border: 3px solid black;
+        }
+        h1 {
+            font-size: 128;
+            text-align: center;
+
+        }
+        h2 {
+            font-size: 64;
+            text-align: center;
+            color: #003A20;
+        }
+        h3 {
+            color: #003A20;
+            font-size: 64;
+
+        }
+        h4 {
+            color: #003A20;
+            font-size: 64;
+            text-align: center;
+
+        }
+        body {
+            background: linear-gradient(to bottom, #A6C0B8,#64A96A,#A6C0B8 );
+        }
+        li{
+            font-size: 64;
+        }
+        p {
+            font-size: 36;
+        }
+    </style>
+    <body>
+        <header>
+            <h1>
+                Зоопарк Мудрый Дуб
+            </h1>
+        </header>
+        <main>
+            <h2>
+                Звери со всего мира!!!
+            </h2>
+            <img style="margin: auto; display:block; width: 745px; height: 390px;" src="https://cs6.pikabu.ru/post_img/2017/08/28/10/og_og_1503939658243247389.jpg">
+        <h3>
+            У нас есть:
+        </h3>
+        <ul> 
+            <li>Носороги - мощные и древние</li>
+            <li>Зебры - полосатые и от этого загадочные</li>
+            <li>Каракалы - ловкие и стремительные</li> 
+            <li>Медведи - огромные и косолапые</li> 
+            <li>Жирафы - высокие и грациозные</li> 
+        </ul>
+        <h4>Фотографии животных</h4>
+        <img style="margin: 0 30 0 30;" src="https://media.baamboozle.com/uploads/images/32116/1602582679_931739" width="300" height="400">
+        <img style="margin: 0 30 0 30" src="https://i.pinimg.com/736x/7e/33/b0/7e33b021fb93bfebf31d24f3b1f71912.jpg"width="300" height="400">
+        <img style="margin: 0 30 0 30" src="https://i.pinimg.com/736x/99/2c/54/992c543366f27ea67a75338a169b0422.jpg"width="300" height="400">
+        <br>
+        <img style="margin: 20 30 0 30" src="https://aif-s3.aif.ru/images/034/741/2b0b5084af59386bef5bb0b40b4b5f5a.jpg"width="500" height="300">
+        <img style="margin: 20 30 0 30" src="https://gas-kvas.com/grafic/uploads/posts/2023-10/1696418960_gas-kvas-com-p-kartinki-zhirafov-3.jpg"width="500" height="300">
+        </main>
+        <footer>
+            <p>Эл.почта: MudriyZooPark@mail.ru</p>
+            <p></p>
+            <p>Телефон: +7 453 231 42 32</p>
+        </footer>
+    </body>
+</html>
