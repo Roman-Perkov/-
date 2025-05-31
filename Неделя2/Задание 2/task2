@@ -1,0 +1,42 @@
+<html>
+    <style>
+        h1 {
+            background-color: indigo;
+            font-size: 40;
+            color: white;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            margin: 25px 50px 25px 0px;
+            padding: 10px 15px 10px 15px;
+        }
+        img {
+            margin: -2px;
+        }
+        p {
+            font-size: 20;
+        }
+        ul {
+            font-size: 20;
+            list-style:url("https://img.icons8.com/?size=12&id=J59Mg9rwboHk&format=png&color=000000") ;
+        }
+    </style>
+    <body>
+        <head>
+            <h1>Sea Aquarium</h1>
+        </head>
+        <main>
+            <img src="https://i.pinimg.com/736x/3d/96/70/3d9670bc3f6b4eb57a5a0349e6ca34dd.jpg" width="400" height="300">
+            <img src="https://i.pinimg.com/736x/55/a5/94/55a59476f85331a698ad3acbc820969f.jpg" width="400" height="300">
+            <img src="https://i.pinimg.com/736x/62/7f/5f/627f5ffcd738c75ee9dae9d08fb89b95.jpg" width="400" height="300">
+            <p>
+                В магазинах нашей сети широкий выбор товаров для вашего морского аквариума:
+            </p>
+            <ul>
+                <li>аквариум объёмом 100-1000 л</li>
+                <li>оборудование</li>
+                <li>грунт и украшения</li>
+                <li>кораллы, живые камни</li>
+                <li>морские животные</li>
+            </ul>
+        </main>
+    </body>
+</html>
