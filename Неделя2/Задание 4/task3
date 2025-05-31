@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <style>
+            .card {
+                position: relative;
+                float: left;
+                width: 150px;
+                text-align: center;
+                padding: 10px;
+                border: 5px double orange;
+                margin: 40px 0px 40px 80px;
+                background-color: bisque;
+            }
+            .card p { 
+                margin-top: 0;
+                margin-bottom: 0;
+                border-bottom: 1px dotted black;
+                display: inline-block;
+                }        
+            .catalog-container{
+                width: 870px;
+                height: 250px;
+                background-color: lightblue;
+            }
+            .principles{
+                border-top: 5px solid navy;
+                border-bottom: 5px solid navy;
+                margin: 30px 60px 30px 30px;
+                height: 150px;
+                padding: 30px;
+                text-align: center;
+            }
+            .principle{
+                float: left;
+                width: 120px;
+                margin-left: 100px;
+            }
+            .product-img{
+                width: 120px;
+                height: 90px;
+
+            }
+            .principle-img{
+                width: 60px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="font-size: 25px">Товары для питомца</h1>
+        <section class="catalog-container">
+            <div class="card">
+                <img src="https://avatars.mds.yandex.net/i?id=6b74cf53d7f71f82f89ee2fafd75bb27_l-12920861-images-thumbs&n=13" class="product-img">
+                <p>Корма</p>
+            </div>
+
+            <div class="card">
+                <img src="https://avatars.mds.yandex.net/get-mpic/4902598/2a0000019381dc212763be982275563bba6c/orig" class="product-img">
+                <p>Игрушки</p>
+            </div>
+
+            <div class="card">
+                <img src="https://ptica-village.ru/wp-content/uploads/e/f/1/ef1f886c67756fd925fa56e2179ff255.png" class="product-img">
+                <p>Домики</p>
+            </div>
+        </section>
+
+        <section class="principles">
+            <div class="principle">
+                <img src="https://www.pngall.com/wp-content/uploads/5/Laboratory-Flask-Glass-PNG-Picture.png" width="40" height="40" class="principles-img">
+                <p>Товары проходят ветэкспертизу</p>
+            </div>
+
+            <div class="principle">
+                <img src="https://i.pinimg.com/736x/46/ef/a4/46efa41520c60d5cb3ecb14eb25855c2.jpg" width="40" height="40" class="principles-img">
+                <p>Доставка в любые точки города</p>
+            </div>
+
+            <div class="principle">
+                <img src="https://sahranursu.com/wp-content/uploads/2019/07/telefon.png" width="40" height="40" class="principles-img">
+                <p>бесплатная консультация</p>
+            </div>
+        </section>
+    </body>
+</html>
