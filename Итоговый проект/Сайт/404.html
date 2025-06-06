@@ -1,0 +1,359 @@
+<html>
+<head>
+    <title>Basil de Gusto - Страница не найдена</title>
+    <style>
+        :root {
+            --primary-color: #689F38;
+            --secondary-color: #7CB342;
+            --text-color: #f0f0f0;
+            --bg-color: #121212;
+            --header-bg: #1E1E1E;
+            --card-bg: #2D2D2D;
+            --footer-bg: #1B5E20;
+            --footer-text: #E0E0E0;
+        }
+
+        .light-theme {
+            --primary-color: #4CAF50;
+            --secondary-color: #388E3C;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+            --header-bg: #fff;
+            --card-bg: #fff;
+            --footer-bg: #2E7D32;
+            --footer-text: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: rgba(30, 30, 30, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-text h1 {
+            font-size: 24px;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .logo-text p {
+            font-size: 12px;
+            color: var(--text-color);
+            font-style: italic;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: var(--text-color);
+        }
+
+        .error-page {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            overflow: hidden;
+        }
+
+        .error-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .error-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(108,159,56,0.1) 0%, rgba(18,18,18,1) 70%);
+            z-index: 1;
+        }
+
+        .error-bg::before {
+            content: "404";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40vw;
+            font-weight: 900;
+            color: rgba(108,159,56,0.05);
+            z-index: -1;
+            line-height: 1;
+        }
+
+        .error-title {
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .error-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .error-description {
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .error-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .error-btn:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+        }
+
+        .error-image {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 30px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 40px 5%;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section ul li a {
+            color: var(--footer-text);
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            opacity: 0.8;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: var(--footer-text);
+            text-decoration: none;
+        }
+
+        .contact-link i {
+            margin-right: 10px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .logo {
+                margin-bottom: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 5px 10px;
+            }
+
+            .error-page {
+                height: auto;
+                padding: 100px 20px;
+            }
+
+            .error-bg::before {
+                font-size: 60vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://images.icon-icons.com/2054/PNG/512/kitchen_oven_stove_cooking_icon_124442.png">
+            <div class="logo-text">
+                <h1>Basil de Gusto</h1>
+                <p>Искусство кулинарии</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#auth">Авторизация</a></li>
+                <li><a href="account.html">Личный кабинет</a></li>
+                <li><a href="index.html#about">О нас</a></li>
+                <li><a href="schedule.html">Конкурсы</a></li>
+                <li><a href="index.html#search">Поиск</a></li>
+                <li><a href="#footer">Контакты</a></li>
+                <li><a href="index-light.html" class="theme-toggle" id="headerThemeToggle">🌞</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="error-page">
+        <div class="error-bg"></div>
+        <div class="error-content">
+            <img src="https://cdn-icons-png.flaticon.com/512/2038/2038076.png" alt="Ошибка 404" class="error-image">
+            <h1 class="error-title">Ошибка 404</h1>
+            <h2 class="error-subtitle">Запрашиваемая страница не найдена</h2>
+            <p class="error-description">
+                Кажется, мы не можем найти то, что вы ищете. Возможно, страница была перемещена или удалена.
+                Попробуйте вернуться на главную или воспользуйтесь меню для навигации по сайту.
+            </p>
+            <a href="index.html" class="error-btn">На главную</a>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <a href="tel:+78001234567" class="contact-link">
+                    <i>📞</i> +7 (800) 123-45-67
+                </a>
+                <a href="mailto:info@basildegusto.com" class="contact-link">
+                    <i>✉</i> info@basildegusto.com
+                </a>
+            </div>
+            <div class="footer-section">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="index-light.html">Главная-светлая</a></li>
+                    <li><a href="competition.html">Конкурс</a></li>
+                    <li><a href="account.html">Личный кабинет</a></li>
+                    <li><a href="404.html">Страница не найдена</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Дополнительно</h3>
+                <ul>
+                    <li><a href="schedule.html">Расписание конкурсов</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Basil de Gusto. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
