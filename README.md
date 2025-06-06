@@ -84,7 +84,7 @@
             <h2>Неделя 1</h2>
             <h3>Задание 1</h3>
             <div class="subtasks">
-                <div><a href="https://github.com/Roman-Perkov/Perkov/blob/main/%D0%9D%D0%B5%D0%B4%D0%B5%D0%BB%D1%8F1/%D0%97%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B51/1.1.html">Задача 1</a></div>
+                <div><a href="Неделя1/Задание1/1.1.html">Задача 1</a></div>
             </div>
             <h3>Задание 2</h3>
             <div class="subtasks">
