@@ -14,8 +14,7 @@
             --text-color: #333;
             --light-gray: #f5f5f5;
             --border-radius: 4px;
-        }
-        
+        }      
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -24,27 +23,23 @@
             margin: 0 auto;
             padding: 20px;
             background-color: #f9f9f9;
-        }
-        
+        }        
         h2 {
             color: var(--primary-color);
             padding-bottom: 8px;
             border-bottom: 2px solid var(--accent-color);
             margin-top: 30px;
         }
-        
         h3 {
             color: var(--secondary-color);
             margin: 20px 0 10px 0;
             font-weight: 500;
         }
-        
         .weeks-container {
             display: flex;
             gap: 30px;
             flex-wrap: wrap;
         }
-        
         .week {
             flex: 1;
             min-width: 300px;
@@ -53,37 +48,30 @@
             border-radius: var(--border-radius);
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        
         .subtasks {
             margin-left: 10px;
         }
-        
         .subtasks div {
             padding: 6px 0;
             border-bottom: 1px dotted #eee;
         }
-        
         .subtasks div:last-child {
             border-bottom: none;
         }
-        
         a {
             color: var(--accent-color);
             text-decoration: none;
             transition: color 0.2s;
         }
-        
         a:hover {
             color: var(--primary-color);
             text-decoration: underline;
         }
-        
         @media (max-width: 768px) {
             .weeks-container {
                 flex-direction: column;
                 gap: 20px;
             }
-            
             .week {
                 min-width: auto;
             }
@@ -96,16 +84,14 @@
             <h2>Неделя 1</h2>
             <h3>Задание 1</h3>
             <div class="subtasks">
-                <div><a href="Неделя1/Задание1/1.1.html">Задача 1</a></div>
+                <div><a href="[Неделя1/Задание1/1.1.html](https://github.com/Roman-Perkov/Perkov/blob/main/%D0%9D%D0%B5%D0%B4%D0%B5%D0%BB%D1%8F1/%D0%97%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B51/1.1.html)">Задача 1</a></div>
             </div>
-            
             <h3>Задание 2</h3>
             <div class="subtasks">
                 <div><a href="Неделя1/Задание 2/1.2.1">Задача 1</a></div>
                 <div><a href="Неделя1/Задание 2/1.2.2">Задача 2</a></div>
                 <div><a href="Неделя1/Задание 2/1.2.3">Задача 3</a></div>
             </div>
-            
             <h3>Задание 3</h3>
             <div class="subtasks">
                 <div><a href="Задание 3/1.3.1">Задача 1</a></div>
@@ -116,7 +102,6 @@
                 <div><a href="Задание 3/1.3.6">Задача 6</a></div>
                 <div><a href="Задание 3/1.3.7">Задача 7</a></div>
             </div>
-            
             <h3>Задание 4</h3>
             <div class="subtasks">
                 <div><a href="Задание 4/1.4.1">Задача 1</a></div>
@@ -126,33 +111,28 @@
                 <div><a href="Задание 4/1.4.5">Задача 5</a></div>
                 <div><a href="Задание 4/1.4.6">Задача 6</a></div>
             </div>
-            
             <h3>Задание 5</h3>
             <div class="subtasks">
                 <div><a href="Задание 5/1.5.1">Задача 1</a></div>
             </div>
-            
             <h3>Задание 6</h3>
             <div class="subtasks">
                 <div><a href="Задание 6/1.6.1">Задача 1</a></div>
                 <div><a href="Задание 6/1.6.2">Задача 2</a></div>
                 <div><a href="Задание 6/1.6.3">Задача 3</a></div>
             </div>
-            
             <h3>Задание 7</h3>
             <div class="subtasks">
                 <div><a href="Задание 7/1.7.1">Задача 1</a></div>
                 <div><a href="Задание 7/1.7.2">Задача 2</a></div>
                 <div><a href="Задание 7/1.7.3">Задача 3</a></div>
             </div>
-            
             <h3>Задание 8</h3>
             <div class="subtasks">
                 <div><a href="Задание 8/1.8.1">Задача 1</a></div>
                 <div><a href="Задание 8/1.8.2">Задача 2</a></div>
                 <div><a href="Задание 8/1.8.3">Задача 3</a></div>
             </div>
-            
             <h3>Задание 9</h3>
             <div class="subtasks">
                 <div><a href="Задание 9/1.9.1">Задача 1</a></div>
@@ -160,32 +140,27 @@
                 <div><a href="Задание 9/1.9.3">Задача 3</a></div>
                 <div><a href="Задание 9/1.9.4">Задача 4</a></div>
             </div>
-            
             <h3>Задание 10</h3>
             <div class="subtasks">
                 <div><a href="Задание 10/1.10.1">Задача 1</a></div>
             </div>
         </div>
-        
         <div class="week">
             <h2>2 неделя</h2>
             <h3>Задание 1</h3>
             <div class="subtasks">
                 <div><p>Задание с фигмой находятся в отчете</p></div>
             </div>
-            
             <h3>Задание 2</h3>
             <div class="subtasks">
                 <div><a href="Неделя2/Задание 2/task1">Задача 1</a></div>
                 <div><a href="Неделя2/Задание 2/task2">Задача 2</a></div>
                 <div><a href="Неделя2/Задание 2/task3">Задача 3</a></div>
             </div>
-            
             <h3>Задание 3</h3>
             <div class="subtasks">
                 <div><a href="Неделя2/Задание 3/task1">Задача 1</a></div>
             </div>
-            
             <h3>Задание 4</h3>
             <div class="subtasks">
                 <div><a href="Неделя2/Задание 4/task1">Задача 1</a></div>
@@ -194,7 +169,6 @@
                 <div><a href="Неделя2/Задание 4/task4">Задача 4</a></div>
                 <div><a href="Неделя2/Задание 4/task5">Задача 5</a></div>
             </div>
-            
             <h3>Задание 5</h3>
             <div class="subtasks">
                 <div><a href="Неделя2/Задание 5/task">Задача 1</a></div>
@@ -202,7 +176,6 @@
                 <div><a href="Неделя2/Задание 5/task1">Задача 3</a></div>
                 <div><a href="Неделя2/Задание 5/task1">Задача 4</a></div>
             </div>
-            
             <h3>Задание 6</h3>
             <div class="subtasks">
                 <div><a href="Неделя2/Задание 6/task1">Задача 1</a></div>
