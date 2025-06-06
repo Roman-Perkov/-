@@ -190,7 +190,7 @@
                 <h2>Итоговый проект (размещенный сайт)</h2>
                 <div><a href="Итоговый проект/Сайт/index.html">Итоговый проект</a></div>
                 <h2>Дизайн-макеты для итогового проекта</h2>
-                <div><a href="https://github.com/Roman-Perkov/Perkov/tree/main//Итоговый%20проект/Дизайн%20макеты">Размещены в репозитории</a></div>
+                <div><a href="https://github.com/Roman-Perkov/Perkov/tree/main/%D0%98%D1%82%D0%BE%D0%B3%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82/%D0%94%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD%20%D0%BC%D0%B0%D0%BA%D0%B5%D1%82%D1%8B">Размещены в репозитории</a></div>
                 <h2>Дополнительные задания</h2>
                 <div><a href="">Задача 1</a></div>
                 <div><a href="">Задача 2</a></div>
