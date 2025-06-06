@@ -1,0 +1,470 @@
+<html>
+<head>
+    <title>Basil de Gusto - Личный кабинет</title>
+    <style>
+        :root {
+            --primary-color: #689F38;
+            --secondary-color: #7CB342;
+            --text-color: #f0f0f0;
+            --bg-color: #121212;
+            --header-bg: #1E1E1E;
+            --card-bg: #2D2D2D;
+            --footer-bg: #1B5E20;
+            --footer-text: #E0E0E0;
+        }
+
+        .light-theme {
+            --primary-color: #4CAF50;
+            --secondary-color: #388E3C;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+            --header-bg: #fff;
+            --card-bg: #fff;
+            --footer-bg: #2E7D32;
+            --footer-text: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: rgba(30, 30, 30, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-text h1 {
+            font-size: 24px;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .logo-text p {
+            font-size: 12px;
+            color: var(--text-color);
+            font-style: italic;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: var(--text-color);
+        }
+
+        section {
+            padding: 40px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        .account-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            gap: 30px;
+        }
+
+        .account-sidebar {
+            width: 250px;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .account-content {
+            flex: 1;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .user-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .user-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid var(--primary-color);
+        }
+
+        .user-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .user-email {
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .account-menu {
+            list-style: none;
+        }
+
+        .account-menu li {
+            margin-bottom: 10px;
+        }
+
+        .account-menu a {
+            display: block;
+            padding: 10px;
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .account-menu a:hover, .account-menu a.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .logout-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            text-align: center;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .logout-btn:hover {
+            background-color: #b71c1c;
+        }
+
+        .contest-form {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-group input, 
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 40px 5%;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section ul li a {
+            color: var(--footer-text);
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            opacity: 0.8;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: var(--footer-text);
+            text-decoration: none;
+        }
+
+        .contact-link i {
+            margin-right: 10px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .logo {
+                margin-bottom: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 5px 10px;
+            }
+
+            .account-container {
+                flex-direction: column;
+            }
+
+            .account-sidebar {
+                width: 100%;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://images.icon-icons.com/2054/PNG/512/kitchen_oven_stove_cooking_icon_124442.png">
+            <div class="logo-text">
+                <h1>Basil de Gusto</h1>
+                <p>Искусство кулинарии</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#auth">Авторизация</a></li>
+                <li><a href="account.html">Личный кабинет</a></li>
+                <li><a href="index.html#about">О нас</a></li>
+                <li><a href="index.html#contests">Конкурсы</a></li>
+                <li><a href="index.html#search">Поиск</a></li>
+                <li><a href="#footer">Контакты</a></li>
+                <li><a href="index-light.html" class="theme-toggle" id="headerThemeToggle">🌞</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="account">
+        <h2 class="section-title">Личный кабинет</h2>
+        <div class="account-container">
+            <div class="account-sidebar">
+                <div class="user-info">
+                    <img src="https://avatars.mds.yandex.net/get-znatoki/1506847/2a00000181c9dee33331539f2191ecf42727/orig" alt="Аватар пользователя" class="user-avatar">
+                    <div class="user-name">Кирилл Перков</div>
+                    <div class="user-email">kirill-perkov@mail.ru</div>
+                </div>
+                <ul class="account-menu">
+                    <li><a href="#" class="active">Запись на конкурс</a></li>
+                    <li><a href="#">Мои записи</a></li>
+                    <li><a href="#">Настройки профиля</a></li>
+                    <li><a href="#">Мои рецепты</a></li>
+                </ul>
+                <button class="logout-btn">Выйти из профиля</button>
+            </div>
+            <div class="account-content">
+                <h3>Запись на кулинарный конкурс</h3>
+                <p>Заполните форму ниже, чтобы записаться на участие в конкурсе</p>
+                
+                <form class="contest-form">
+                    <div class="form-group">
+                        <label for="contest">Конкурс*</label>
+                        <select id="contest" name="contest" required>
+                            <option value="">Выберите конкурс</option>
+                            <option value="1">Французские классики</option>
+                            <option value="2">Азиатская уличная еда</option>
+                            <option value="3">Молекулярная кухня</option>
+                            <option value="4">искусство хлебпечения</option>
+                            <option value="5">Миксология: авторские коктейли</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Дата*</label>
+                        <input type="date" id="date" name="date" value="2024-07-08" min="2024-07-08" max="2024-07-08" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="time">Время*</label>
+                        <select id="time" name="time" required>
+                            <option value="">Выберите время</option>
+                            <option value="9:00">9:00 - 10:00</option>
+                            <option value="10:00">10:00 - 11:00</option>
+                            <option value="11:00">11:00 - 12:00</option>
+                            <option value="12:00">12:00 - 13:00</option>
+                            <option value="13:00">13:00 - 14:00</option>
+                            <option value="14:00">14:00 - 15:00</option>
+                            <option value="15:00">15:00 - 16:00</option>
+                            <option value="16:00">16:00 - 17:00</option>
+                            <option value="17:00">17:00 - 18:00</option>
+                            <option value="18:00">18:00 - 19:00</option>
+                            <option value="19:00">19:00 - 20:00</option>
+                            <option value="20:00">20:00 - 21:00</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="participants">Количество участников*</label>
+                        <input type="number" id="participants" name="participants" min="1" max="10" required>
+                    </div>
+                    
+                    <button type="submit" class="btn">Записаться на конкурс</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <a href="tel:+78001234567" class="contact-link">
+                    <i>📞</i> +7 (800) 123-45-67
+                </a>
+                <a href="mailto:info@basildegusto.com" class="contact-link">
+                    <i>✉</i> info@basildegusto.com
+                </a>
+            </div>
+            <div class="footer-section">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="index-light.html">Главная-светлая</a></li>
+                    <li><a href="competition.html">Конкурс</a></li>
+                    <li><a href="account.html">Личный кабинет</a></li>
+                    <li><a href="404.html">Страница не найдена</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Дополнительно</h3>
+                <ul>
+                    <li><a href="schedule.html">Расписание конкурсов</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Basil de Gusto. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
