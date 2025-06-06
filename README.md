@@ -57,7 +57,7 @@
         }        
         .subtasks div:last-child {
             border-bottom: none;
-        }     
+        }        
         a {
             color: var(--accent-color);
             text-decoration: none;
@@ -71,7 +71,7 @@
             .weeks-container {
                 flex-direction: column;
                 gap: 20px;
-            }            
+            }
             .week {
                 min-width: auto;
             }
@@ -85,7 +85,7 @@
             <h3>Задание 1</h3>
             <div class="subtasks">
                 <div><a href="Неделя1/Задание1/1.1.html">Задача 1</a></div>
-            </div>            
+            </div>      
             <h3>Задание 2</h3>
             <div class="subtasks">
                 <div><a href="Неделя1/Задание 2/1.2.1.html">Задача 1</a></div>
@@ -190,7 +190,7 @@
                 <h2>Итоговый проект (размещенный сайт)</h2>
                 <div><a href="Итоговый проект/Сайт/index.html">Итоговый проект</a></div>
                 <h2>Дизайн-макеты для итогового проекта</h2>
-                <div><a href="Итоговый проект/Дизайн макеты">Размещены в репозитории</a></div>
+                <div><a href="https://github.com/Roman-Perkov/Perkov/tree/main//Итоговый%20проект/Дизайн макеты">Размещены в репозитории</a></div>
                 <h2>Дополнительные задания</h2>
                 <div><a href="">Задача 1</a></div>
                 <div><a href="">Задача 2</a></div>
